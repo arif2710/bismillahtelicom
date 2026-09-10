@@ -7,13 +7,9 @@
 <title>বিসমিল্লাহ টেলিকম | মোবাইল সার্ভিসিং</title>
 
 <meta name="description"
-content="বিসমিল্লাহ টেলিকম — মোবাইল সার্ভিসিং, ফ্ল্যাশ, FRP, Pattern Lock এবং মোবাইল যন্ত্রাংশ ও খুচরা পণ্য।">
+content="বিসমিল্লাহ টেলিকম — মোবাইল সার্ভিসিং, ফ্ল্যাশ, FRP, Pattern Lock এবং মোবাইল যন্ত্রাংশ। ধামরাই বাজার, ঢাকা।">
 
 <style>
-/* =========================
-   BASIC
-========================= */
-
 *{
     margin:0;
     padding:0;
@@ -22,109 +18,826 @@ content="বিসমিল্লাহ টেলিকম — মোবাই�
 }
 
 body{
-    font-family:"Noto Sans Bengali","SolaimanLipi",Arial,sans-serif;
-    background:#f7faf9;
-    color:#17231f;
+    font-family:"Noto Sans Bengali", Arial, sans-serif;
+    background:#f5f7fa;
+    color:#222;
     line-height:1.7;
 }
 
 a{
     text-decoration:none;
-    color:inherit;
 }
 
 .container{
-    width:92%;
+    width:90%;
     max-width:1150px;
     margin:auto;
 }
 
-/* =========================
-   HEADER
-========================= */
-
+/* Header */
 header{
+    background:#071a2b;
+    color:white;
     position:sticky;
     top:0;
-    z-index:1000;
-    background:white;
-    box-shadow:0 2px 15px rgba(0,0,0,.08);
+    z-index:999;
+    box-shadow:0 2px 10px rgba(0,0,0,.2);
 }
 
 .navbar{
-    height:72px;
+    min-height:70px;
     display:flex;
     align-items:center;
     justify-content:space-between;
 }
 
 .logo{
-    font-size:24px;
-    font-weight:900;
-    color:#087f5b;
+    font-size:23px;
+    font-weight:bold;
+    color:#fff;
 }
 
-.logo small{
-    display:block;
-    font-size:9px;
-    letter-spacing:1px;
-    color:#777;
-    margin-top:-7px;
+.logo span{
+    color:#00d084;
 }
 
-.nav-menu{
+.nav-links{
     display:flex;
     list-style:none;
     gap:25px;
 }
 
-.nav-menu a{
-    font-weight:bold;
+.nav-links a{
+    color:#fff;
+    font-size:16px;
     transition:.3s;
 }
 
-.nav-menu a:hover{
-    color:#087f5b;
+.nav-links a:hover{
+    color:#00d084;
 }
 
 .menu-btn{
     display:none;
-    border:none;
-    background:#e7f7f0;
-    color:#087f5b;
-    font-size:25px;
-    padding:5px 12px;
-    border-radius:8px;
+    font-size:30px;
     cursor:pointer;
 }
 
-/* =========================
-   HERO
-========================= */
-
+/* Hero */
 .hero{
-    padding:90px 0;
-    background:
-    linear-gradient(135deg,#e6f8f0,#ffffff,#eaf9f4);
+    min-height:500px;
+    display:flex;
+    align-items:center;
+    background:linear-gradient(135deg,#071a2b,#0b3954);
+    color:white;
+    text-align:center;
 }
 
 .hero-content{
+    width:100%;
+}
+
+.hero h1{
+    font-size:45px;
+    margin-bottom:12px;
+}
+
+.hero h1 span{
+    color:#00d084;
+}
+
+.hero p{
+    font-size:19px;
+    margin-bottom:25px;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 25px;
+    border-radius:7px;
+    margin:5px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:#00d084;
+    color:#071a2b;
+}
+
+.btn-primary:hover{
+    background:#00b871;
+}
+
+.btn-outline{
+    border:2px solid #fff;
+    color:#fff;
+}
+
+.btn-outline:hover{
+    background:#fff;
+    color:#071a2b;
+}
+
+/* Sections */
+section{
+    padding:70px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-title h2{
+    font-size:32px;
+    color:#071a2b;
+}
+
+.section-title p{
+    color:#666;
+}
+
+/* About */
+.about{
+    background:#fff;
+}
+
+.about-grid{
     display:grid;
-    grid-template-columns:1.1fr .9fr;
-    gap:50px;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
     align-items:center;
 }
 
-.badge{
-    display:inline-block;
-    background:#d5f3e6;
-    color:#056346;
-    padding:7px 16px;
-    border-radius:50px;
-    font-weight:bold;
+.about-box{
+    background:#f7f9fb;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,.07);
+}
+
+.about-box h3{
+    color:#071a2b;
     margin-bottom:15px;
 }
 
+.about-list{
+    list-style:none;
+}
+
+.about-list li{
+    margin:10px 0;
+}
+
+.about-list li::before{
+    content:"✓";
+    color:#00a86b;
+    font-weight:bold;
+    margin-right:8px;
+}
+
+/* Services */
+.services{
+    background:#f5f7fa;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.service-card{
+    background:#fff;
+    padding:28px 20px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 4px 15px rgba(0,0,0,.07);
+    transition:.3s;
+}
+
+.service-card:hover{
+    transform:translateY(-5px);
+}
+
+.service-icon{
+    font-size:42px;
+    margin-bottom:12px;
+}
+
+.service-card h3{
+    color:#071a2b;
+    margin-bottom:8px;
+}
+
+/* Notice */
+.notice{
+    background:#071a2b;
+    color:white;
+}
+
+.notice-box{
+    background:#102d44;
+    padding:30px;
+    border-left:5px solid #00d084;
+    border-radius:8px;
+}
+
+.notice-box h3{
+    color:#00d084;
+    margin-bottom:10px;
+}
+
+/* Gallery */
+.gallery{
+    background:#fff;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,.15);
+}
+
+/* Contact */
+.contact{
+    background:#f5f7fa;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.contact-card{
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,.07);
+}
+
+.contact-item{
+    display:flex;
+    gap:15px;
+    margin-bottom:22px;
+    align-items:flex-start;
+}
+
+.contact-icon{
+    font-size:25px;
+}
+
+.contact-item h4{
+    color:#071a2b;
+    margin-bottom:3px;
+}
+
+.contact-item a{
+    color:#008f60;
+    word-break:break-word;
+}
+
+.map-box{
+    overflow:hidden;
+    border-radius:12px;
+    min-height:420px;
+    box-shadow:0 4px 15px rgba(0,0,0,.1);
+}
+
+.map-box iframe{
+    width:100%;
+    height:420px;
+    border:0;
+}
+
+/* Location Button */
+.location-button{
+    display:inline-block;
+    margin-top:15px;
+    padding:12px 20px;
+    background:#00d084;
+    color:#071a2b;
+    border-radius:7px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.location-button:hover{
+    background:#00b871;
+}
+
+/* Footer */
+footer{
+    background:#071a2b;
+    color:#fff;
+    text-align:center;
+    padding:30px 15px;
+}
+
+footer p{
+    margin:5px 0;
+}
+
+footer span{
+    color:#00d084;
+}
+
+/* Floating Call Button */
+.call-button{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:58px;
+    height:58px;
+    background:#00c853;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:27px;
+    box-shadow:0 4px 15px rgba(0,0,0,.3);
+    z-index:999;
+}
+
+/* Responsive */
+@media(max-width:800px){
+
+    .nav-links{
+        position:absolute;
+        top:70px;
+        left:0;
+        width:100%;
+        background:#071a2b;
+        display:none;
+        flex-direction:column;
+        text-align:center;
+        padding:20px 0;
+        gap:15px;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .hero h1{
+        font-size:32px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .about-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .service-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:500px){
+
+    .logo{
+        font-size:19px;
+    }
+
+    .service-grid{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:50px 0;
+    }
+
+    .hero{
+        min-height:450px;
+    }
+
+    .hero h1{
+        font-size:29px;
+    }
+
+    .section-title h2{
+        font-size:27px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Header -->
+<header>
+    <div class="container navbar">
+
+        <div class="logo">
+            বিসমিল্লাহ <span>টেলিকম</span>
+        </div>
+
+        <div class="menu-btn" onclick="toggleMenu()">
+            ☰
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home" onclick="closeMenu()">হোম</a></li>
+            <li><a href="#about" onclick="closeMenu()">আমাদের সম্পর্কে</a></li>
+            <li><a href="#services" onclick="closeMenu()">সার্ভিস</a></li>
+            <li><a href="#notice" onclick="closeMenu()">নোটিশ</a></li>
+            <li><a href="#gallery" onclick="closeMenu()">গ্যালারি</a></li>
+            <li><a href="#contact" onclick="closeMenu()">যোগাযোগ</a></li>
+        </ul>
+
+    </div>
+</header>
+
+
+<!-- Hero -->
+<section class="hero" id="home">
+
+    <div class="container hero-content">
+
+        <h1>
+            বিসমিল্লাহ <span>টেলিকম</span>
+        </h1>
+
+        <p>
+            মোবাইল সার্ভিসিং ও মোবাইল যন্ত্রাংশের বিশ্বস্ত প্রতিষ্ঠান
+        </p>
+
+        <a href="#services" class="btn btn-primary">
+            আমাদের সার্ভিস
+        </a>
+
+        <a href="#contact" class="btn btn-outline">
+            যোগাযোগ করুন
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- About -->
+<section class="about" id="about">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>আমাদের সম্পর্কে</h2>
+            <p>বিশ্বাস ও মানসম্মত সেবাই আমাদের অঙ্গীকার</p>
+        </div>
+
+        <div class="about-grid">
+
+            <div class="about-box">
+
+                <h3>বিসমিল্লাহ টেলিকম</h3>
+
+                <p>
+                    বিসমিল্লাহ টেলিকম ধামরাই বাজারে মোবাইল সার্ভিসিং,
+                    সফটওয়্যার সার্ভিস এবং মোবাইল যন্ত্রাংশের বিশ্বস্ত প্রতিষ্ঠান।
+                </p>
+
+                <br>
+
+                <p>
+                    অভিজ্ঞতার সাথে আমরা গ্রাহকদের মোবাইলের বিভিন্ন
+                    সমস্যা সমাধানের চেষ্টা করি।
+                </p>
+
+            </div>
+
+            <div class="about-box">
+
+                <h3>প্রধান সেবাসমূহ</h3>
+
+                <ul class="about-list">
+                    <li>মোবাইল সার্ভিসিং</li>
+                    <li>মোবাইল ফ্ল্যাশ</li>
+                    <li>FRP খোলা</li>
+                    <li>Pattern Lock খোলা</li>
+                    <li>মোবাইল যন্ত্রাংশ ও এক্সেসরিজ</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Services -->
+<section class="services" id="services">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>আমাদের সার্ভিস</h2>
+            <p>আপনার মোবাইলের বিভিন্ন সমস্যার সমাধান</p>
+        </div>
+
+        <div class="service-grid">
+
+            <div class="service-card">
+                <div class="service-icon">🔧</div>
+                <h3>মোবাইল সার্ভিসিং</h3>
+                <p>
+                    বিভিন্ন ধরনের মোবাইল হার্ডওয়্যার সমস্যা
+                    সমাধানের চেষ্টা করা হয়।
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">📱</div>
+                <h3>মোবাইল ফ্ল্যাশ</h3>
+                <p>
+                    প্রয়োজন অনুযায়ী মোবাইল সফটওয়্যার
+                    সার্ভিস প্রদান করা হয়।
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🔐</div>
+                <h3>FRP সার্ভিস</h3>
+                <p>
+                    বৈধ মালিকানার ডিভাইসে FRP সংক্রান্ত
+                    সার্ভিস প্রদান করা হয়।
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🔑</div>
+                <h3>Pattern Lock</h3>
+                <p>
+                    বৈধ মালিকানার ডিভাইসের Pattern Lock
+                    সংক্রান্ত সার্ভিস।
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">⚙️</div>
+                <h3>মোবাইল যন্ত্রাংশ</h3>
+                <p>
+                    বিভিন্ন ধরনের মোবাইল পার্টস ও
+                    প্রয়োজনীয় যন্ত্রাংশ পাওয়া যায়।
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🎧</div>
+                <h3>মোবাইল এক্সেসরিজ</h3>
+                <p>
+                    প্রয়োজনীয় মোবাইল এক্সেসরিজ ও
+                    আনুষঙ্গিক পণ্য পাওয়া যায়।
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Notice -->
+<section class="notice" id="notice">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2 style="color:white;">নোটিশ</h2>
+        </div>
+
+        <div class="notice-box">
+
+            <h3>📢 গুরুত্বপূর্ণ নোটিশ</h3>
+
+            <p>
+                বিসমিল্লাহ টেলিকমে মোবাইল সার্ভিসিং,
+                ফ্ল্যাশ, FRP, Pattern Lock এবং বিভিন্ন
+                মোবাইল যন্ত্রাংশের সেবা পাওয়া যায়।
+            </p>
+
+            <p style="margin-top:10px;">
+                বিস্তারিত জানতে সরাসরি আমাদের সাথে যোগাযোগ করুন।
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Gallery -->
+<section class="gallery" id="gallery">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>গ্যালারি</h2>
+            <p>আমাদের দোকানের ছবি</p>
+        </div>
+
+        <div class="gallery-grid">
+
+            <!-- আপনার ছবির নাম shop-card-front.jpg হলে -->
+            <img src="shop-card-front.jpg"
+                 alt="বিসমিল্লাহ টেলিকম">
+
+            <!-- আপনার দ্বিতীয় ছবির নাম shop-card-back.jpg হলে -->
+            <img src="shop-card-back.jpg"
+                 alt="বিসমিল্লাহ টেলিকম কার্ড">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Contact -->
+<section class="contact" id="contact">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>যোগাযোগ করুন</h2>
+            <p>আমাদের দোকানে আসতে নিচের লোকেশন দেখুন</p>
+        </div>
+
+        <div class="contact-grid">
+
+            <!-- Contact Information -->
+            <div class="contact-card">
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">👤</div>
+
+                    <div>
+                        <h4>প্রোঃ</h4>
+                        <p>মোঃ ওবাইদুল খান</p>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">📞</div>
+
+                    <div>
+                        <h4>মোবাইল</h4>
+
+                        <a href="tel:01959050300">
+                            01959-050300
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">✉️</div>
+
+                    <div>
+                        <h4>ই-মেইল</h4>
+
+                        <a href="mailto:ObaidulKhanpress@gmail.com">
+                            ObaidulKhanpress@gmail.com
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">📍</div>
+
+                    <div>
+
+                        <h4>ঠিকানা</h4>
+
+                        <p>
+                            ইউনিক ডায়াগনস্টিক সেন্টার এর বিপরীত পাশে,
+                            ধামরাই বাজার, ধামরাই, ঢাকা।
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Google Maps Location -->
+                <a
+                    class="location-button"
+                    href="https://maps.app.goo.gl/iW9K8PWW4vULhzAF7"
+                    target="_blank"
+                    rel="noopener">
+                    📍 Google Maps-এ লোকেশন দেখুন
+                </a>
+
+            </div>
+
+
+            <!-- Map -->
+            <div class="map-box">
+
+                <iframe
+                    src="https://www.google.com/maps?q=W696%2BRH7%20Bismillah%20Telecom%2C%20Dhamrai&output=embed"
+                    loading="lazy"
+                    allowfullscreen
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Footer -->
+<footer>
+
+    <p>
+        © <span id="year"></span>
+        <strong>বিসমিল্লাহ টেলিকম</strong>
+    </p>
+
+    <p>
+        মোবাইল সার্ভিসিং ও মোবাইল যন্ত্রাংশ
+    </p>
+
+</footer>
+
+
+<!-- Floating Call Button -->
+<a
+    href="tel:01959050300"
+    class="call-button"
+    title="কল করুন">
+    ☎
+</a>
+
+
+<script>
+
+/* Mobile Menu */
+function toggleMenu(){
+
+    const nav = document.getElementById("navLinks");
+
+    nav.classList.toggle("active");
+
+}
+
+
+/* Close Mobile Menu */
+function closeMenu(){
+
+    document.getElementById("navLinks")
+    .classList.remove("active");
+
+}
+
+
+/* Current Year */
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
 .hero h1{
     font-size:58px;
     line-height:1.2;
