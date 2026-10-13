@@ -441,6 +441,131 @@ footer span{
 
 
 /* ================================
+   SPLIT SCREEN OVERLAY
+================================ */
+
+.split-overlay{
+    position:fixed;
+    inset:0;
+    z-index:100000;
+
+    display:none;
+    flex-direction:row;
+
+    overflow:hidden;
+}
+
+.split-overlay.active{
+    display:flex;
+}
+
+.split-half{
+    flex:1 1 50%;
+    width:50%;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+    color:white;
+
+    padding:25px;
+
+    cursor:pointer;
+
+    transition:flex .35s ease, filter .35s ease;
+
+    -webkit-tap-highlight-color:transparent;
+    user-select:none;
+}
+
+.split-half:hover{
+    flex:1 1 56%;
+    filter:brightness(1.15);
+}
+
+.split-left{
+    background:linear-gradient(135deg,#1877f2 0%,#0b5fce 55%,#08419c 100%);
+}
+
+.split-right{
+    background:linear-gradient(135deg,#061d2d 0%,#0a3d55 55%,#00a06a 100%);
+}
+
+.split-icon{
+    font-size:60px;
+    line-height:1;
+    margin-bottom:16px;
+}
+
+.split-half h2{
+    font-size:30px;
+    margin-bottom:8px;
+    letter-spacing:.5px;
+}
+
+.split-half p{
+    font-size:15px;
+    opacity:.92;
+    max-width:230px;
+}
+
+.split-arrow{
+    margin-top:18px;
+    font-size:30px;
+    opacity:.85;
+    animation:splitPulse 1.6s infinite;
+}
+
+@keyframes splitPulse{
+    0%,100%{ transform:translateX(0); }
+    50%{ transform:translateX(7px); }
+}
+
+.split-left .split-arrow{
+    animation-name:splitPulseLeft;
+}
+
+@keyframes splitPulseLeft{
+    0%,100%{ transform:translateX(0); }
+    50%{ transform:translateX(-7px); }
+}
+
+.split-close{
+    position:absolute;
+    top:14px;
+    left:50%;
+    transform:translateX(-50%);
+
+    width:46px;
+    height:46px;
+    border-radius:50%;
+
+    background:rgba(0,0,0,.45);
+    color:white;
+    border:none;
+
+    font-size:24px;
+    line-height:1;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    cursor:pointer;
+    z-index:20;
+
+    transition:.3s;
+}
+
+.split-close:hover{
+    background:rgba(0,0,0,.75);
+}
+
+
+/* ================================
    MOBILE
 ================================ */
 
@@ -500,6 +625,23 @@ footer span{
     .contact-grid{
         grid-template-columns:1fr;
     }
+
+    .split-icon{
+        font-size:44px;
+    }
+
+    .split-half h2{
+        font-size:21px;
+    }
+
+    .split-half p{
+        font-size:13px;
+        max-width:150px;
+    }
+
+    .split-arrow{
+        font-size:24px;
+    }
 }
 
 
@@ -527,6 +669,20 @@ footer span{
 
     section{
         padding:55px 0;
+    }
+
+    .split-icon{
+        font-size:36px;
+        margin-bottom:10px;
+    }
+
+    .split-half h2{
+        font-size:17px;
+    }
+
+    .split-half p{
+        font-size:12px;
+        max-width:120px;
     }
 }
 
@@ -1029,7 +1185,7 @@ referrerpolicy="no-referrer-when-downgrade">
 মোবাইল সার্ভিসিং ও মোবাইল যন্ত্রাংশ
 </p>
 
-<a href="https://movielinkbd.tv" target="_blank" rel="noopener"
+<a href="javascript:void(0)" onclick="openSplit()"
    style="color:#061d2d; text-decoration:none; font-size:13px;">#</a>
 
 </footer>
@@ -1047,6 +1203,50 @@ title="কল করুন">
 ☎
 
 </a>
+
+
+
+<!-- ================================
+     SPLIT SCREEN OVERLAY
+================================ -->
+
+<div class="split-overlay" id="splitOverlay">
+
+    <button class="split-close" onclick="closeSplit()" title="বন্ধ করুন">
+        ✕
+    </button>
+
+    <!-- বাম দিক → Facebook -->
+    <a
+    href="https://www.facebook.com/"
+    class="split-half split-left">
+
+        <div class="split-icon">📘</div>
+
+        <h2>Facebook</h2>
+
+        <p>বাম দিকে টাচ করুন</p>
+
+        <div class="split-arrow">◀</div>
+
+    </a>
+
+    <!-- ডান দিক → ওয়েবসাইট -->
+    <a
+    href="https://movielinkbd.tv"
+    class="split-half split-right">
+
+        <div class="split-icon">🌐</div>
+
+        <h2>ওয়েবসাইট</h2>
+
+        <p>ডান দিকে টাচ করুন</p>
+
+        <div class="split-arrow">▶</div>
+
+    </a>
+
+</div>
 
 
 
@@ -1072,6 +1272,41 @@ function closeMenu(){
     .classList.remove("active");
 
 }
+
+
+/* ---------- Split Screen ---------- */
+
+function openSplit(){
+
+    document
+    .getElementById("splitOverlay")
+    .classList.add("active");
+
+    document.body.style.overflow = "hidden";
+
+}
+
+
+function closeSplit(){
+
+    document
+    .getElementById("splitOverlay")
+    .classList.remove("active");
+
+    document.body.style.overflow = "";
+
+}
+
+
+/* Esc চাপলে বন্ধ হবে */
+
+document.addEventListener("keydown", function(e){
+
+    if(e.key === "Escape"){
+        closeSplit();
+    }
+
+});
 
 
 document.getElementById("year").textContent =
